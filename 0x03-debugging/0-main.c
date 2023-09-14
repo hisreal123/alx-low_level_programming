@@ -1,14 +1,12 @@
-#include <main.h>
-/*
- * main - The main.c file on debugging in c
- *
- * Return - 0 
- */
-
-int main()
+#include "main.h"
+/**
+* main - Test function for positive or negative
+* Return: 0
+*/
+int main(void)
 {
-	int i;
-	i = 0;
-	positive_or_negative(i);
-	return (0);
+int i;
+i = 0;
+positive_or_negative(i);
+return (0);
 }
