@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 #include <stdio.h>
 /**
  * _strncpy - copy a string
@@ -14,7 +14,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	while (a < n && src[a] != '\0')
 	{
-		dest[a] = src[a]
+		dest[a] = src[a];
 	}
 
 	while (a < n)
