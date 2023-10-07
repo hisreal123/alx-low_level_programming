@@ -3,9 +3,10 @@
 #include <stdlib.h>
 
 /**
- * main - check the code
+ * *malloc_checked - allocates memory using malloc
+ * @b: number of bytes to allocate
  *
- * Return: Always 0.
+ * Return: a pointer to the allocated memory
  */
 
 void *malloc_checked(unsigned int b)
