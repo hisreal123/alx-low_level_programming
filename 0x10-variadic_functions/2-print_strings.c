@@ -17,7 +17,6 @@ va_list args;
 unsigned int i = 0;
 va_start(args, n);
 
-if (*separator != '\0')
 for ( ; i < n; i++)
 {
 const char *letter = va_arg(args, const char *);
