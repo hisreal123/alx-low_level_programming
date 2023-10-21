@@ -18,3 +18,4 @@ _start:
 
 section .text
     extern printf
+    
