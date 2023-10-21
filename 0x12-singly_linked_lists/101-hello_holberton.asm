@@ -1,18 +1,20 @@
+section .data
+    hello_fmt db "Hello, Holberton",0xA,0
+    hello_args db 0
 
-bal    main
+section .text
+    global _start
 
-          extern    printf
+_start:
+    ; Call printf
+    mov rdi, hello_fmt
+    mov rax, 0      ; 0 is the format for printf
+    call printf
 
-main:
+    ; Exit the program
+    mov rax, 60     ; 60 is the syscall number for exit
+    xor rdi, rdi    ; Set the exit status to 0
+    syscall
 
-          mov   edi, format
-
-          xor   eax, eax
-
-          call  printf
-
-          mov         eax, 0
-
-          ret
-
-format: db `Hello, Holberton\n`,0
+section .text
+    extern printf
