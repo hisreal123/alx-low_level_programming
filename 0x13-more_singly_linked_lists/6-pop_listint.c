@@ -22,10 +22,10 @@ int pop_listint(listint_t **head)
 		return (0);
 
 
-	data = (*head)->n;
-	tmp = (*head)->next;
-	free(*head);
-	*head = tmp;
+	tmp = *head;
+	data = tmp->n;
+	*head = (*head)->next;
+	free(tmp);
 
 	return (data);
 }
