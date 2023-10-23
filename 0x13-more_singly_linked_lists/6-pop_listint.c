@@ -18,16 +18,15 @@ int pop_listint(listint_t **head)
 	listint_t *tmp;
 	int data;
 
-	if (!*head)
+	if (*head == NULL)
 		return (0);
 
-	if (*head != NULL || !head)
-	{
-		tmp = *head;
-		data = (*head)->n;
-		*head = (*head)->next;
-		free(tmp);
-	}
+
+	tmp = *head;
+	data = (*head)->n;
+	*head = (*head)->next;
+	free(tmp);
+
 
 	return (data);
 }
