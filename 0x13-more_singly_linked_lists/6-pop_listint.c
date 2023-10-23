@@ -21,10 +21,13 @@ int pop_listint(listint_t **head)
 	if (!*head)
 		return (0);
 
-	tmp = *head;
-	data = (*head)->n;
-	*head = (*head)->next;
-	free(tmp);
+	if (*head != NULL || !head)
+	{
+		tmp = *head;
+		data = (*head)->n;
+		*head = (*head)->next;
+		free(tmp);
+	}
 
 	return (data);
 }
